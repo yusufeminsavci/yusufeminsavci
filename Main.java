@@ -1,20 +1,23 @@
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int r;
-        double pi = 3.14;
+        double boy,kilo,indeks;
         Scanner inp = new Scanner(System.in);
-        System.out.print("Dairenin yarı çapını giriniz : ");
-        r = inp.nextInt();
-        double alan = pi * r * r;
-        double cevre = 2 * pi * r;
-
-        System.out.println("Dairenin alanı : " + alan);
-        System.out.println("Dairenin Çevresi : " + cevre);
+        System.out.println("Boyunuzu giriniz : ");
+        boy = inp.nextDouble();
+        System.out.println("Kilonuzu giriniz : ");
+        kilo = inp.nextDouble();
+        indeks = kilo/(boy*boy);
+        System.out.println("Kilonuz : "+kilo);
+        System.out.println("Boyunuz : "+boy);
+        System.out.println("Vücut kitle indeksiniz : "+indeks);
 
     }
-}
+
+    }
 
 
 
