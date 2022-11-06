@@ -1,67 +1,28 @@
-
-import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
+    Course mat = new Course("Matematik", "MAT101", "MAT");
+    Course fizik = new Course("Fizik", "FZK101", "FZK");
+    Course kimya = new Course("Kimya", "KMY101", "KMY");
 
-        String userName, passWord,sifirlendirme, newPassword ;
-        Scanner input= new Scanner(System.in);
-        System.out.print(" Kullanci Adinizi yaziniz  ");
-        userName=input.nextLine( );
-        System.out.print(" Sifrenizi yaziniz  ");
-        passWord=input.nextLine();
+    teacher t1 = new teacher("Mahmut Hoca", "90550000000", "MAT");
+    teacher t2 = new teacher("Ahmet kum", "90550000001", "FZK");
+    teacher t3 = new teacher("Nesihan Sönmez", "90550000002", "KMY");
 
-        if (userName.equals("patika") && passWord.equals("java") ){
-            System.out.println(" ***  Giris yaptiniz **** ");
+                mat.addTeacher(t1);
+                fizik.addTeacher(t2);
+                kimya.addTeacher(t3);
 
-        }
-        else{
-            System.out.println("  Hatali sifre girdiniz yeni sifre belirtmek isterseniz \"yes\"  istemezseniz \" no\"  secin  ");
-            sifirlendirme=input.nextLine();
+    Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
+                s1.addBulkExamNote(50,20,40);
+                s1.addBulkVerbalNote(80, 40, 25);
+                s1.isPass();
 
-            if( sifirlendirme.equals("no")){
-                System.out.println(" giris sonlandirildi ");}
+    Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
+                s2.addBulkExamNote(100,50,40);
+                s2.addBulkVerbalNote(90, 60, 80);
+                s2.isPass();
 
-            else if (sifirlendirme.equals("yes")) {
-                System.out.println(" yeni sifrenizi yazin ");
-                newPassword=input.nextLine();
-
-                if( newPassword.equals("java")|| newPassword.equals(passWord)){
-                    System.out.println(" Hatali giris tekrar dene ");
-                }
-                else{
-                    System.out.println(" sifrenizi basariyla yenilendi ");
-
-                }
-
-            }
-            else{
-                System.out.println(" hatali secim sectiniz ");
-
-            }
-
-
-        }
-
-
-
-
-
-
-
-       }
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-
-
+    Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
+                s3.addBulkExamNote(50,80,30);
+                s3.addBulkVerbalNote(60, 100, 50);
+                s3.isPass();
+}
