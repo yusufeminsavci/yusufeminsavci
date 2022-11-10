@@ -1,0 +1,12 @@
+DVD kiralama örnek veritabanında aşağıdaki sorgu senaryolarını gerçekleştirin.
+Film tablosundaki başlık ve açıklama sütunlarındaki verileri sıralayın.
+Film tablosundaki tüm sütunlardaki verileri, film uzunluğu 60'tan büyük VE 75'ten küçük olacak şekilde sıralayın.
+Film tablosundaki tüm sütunlardaki verileri kiralama_oranı 0.99 VE değiştirme_maliyeti 12.99 VEYA 28.99 ile sıralayın.
+Müşteri tablosunun first_name sütununda değeri 'Mary' olan müşterinin son_ad sütunundaki değer nedir?
+Uzunluğu 50'den büyük DEĞİL, ancak kiralama oranı 2.99 veya 4.99 DEĞİL olan film tablosundaki verileri sıralayın.
+Yanıtlar
+Filmden başlık, açıklama SEÇİN ;
+* Uzunluğun >60 VE uzunluğun < 75 olduğu filmden * SEÇİN ;
+SEÇ * filmden kiralama_oranı = 0.99 VE ( değiştirme_maliyeti = 12.99 VEYA değiştirme_maliyeti = 28.99);
+WHERE müşterisinden soyadını SEÇ first_name ='Mary';
+Uzunluk>50 OLMAYAN VE OLMAYAN filmden * SEÇİN (kiralama_oranı = 2,99 VEYA kiralama_oranı = 4,99);
