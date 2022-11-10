@@ -1,33 +1,13 @@
- Ödev4'in 1. Ödev konusu:
+ 1
+Filmden başlık, uzunluk SEÇ
+NEREDE başlık ' %n ' GİBİ 
+Uzunluğa Göre SİPARİŞ LIMIT  5 ;
 
--- film tablosunda yer alan sütununda yer alan değişken değerleri sıralayınız.
+-- 2
+Filmden başlık, uzunluk SEÇ
+NEREDE başlık ' %n ' GİBİ 
+Uzunluğa GÖRE SİPARİŞ DESC  LIMIT  5 OFSET 5 ;
 
-filmden farklı (replacement_cost) seçin
-
--- Ödev4'in 2. Ödev konusu:
-
--- film tablosunda bulunan değiştirme_ sütununda farklı kaç tane veri vardır?
-
- filmden sayıyı (replacement_cost ) seçin
-
--- Ödev4'in 3. Ödev konusu:
-
--- film tablosunda film adlarında (başlık) kaçtanı T karakter ile başlar ve aynı zamanda derecelendirme 'G' yeliğiniz?
-
- ' T% ' ve derecelendirme = ' G ' gibi bir filmden sayıyı ( başlık ) seçin    
-
--- Ödev4'in 4. Ödev konusu:
-
--- ülke tablosunda bulunan ülke isimlerinden (ülke) kaç karakterden oluşmaktadır?.
-
- ' _____ ' gibi ülkenin bulunduğu ülkeden sayıyı ( * ) seçin _   
-
--- Ödev4'in 5. Ödev konusu
-
---     şehir tablosundaki şehir isimlerinin kaç adımından 'R' veya r karakter ile ısırıcı?
-
- şehirden *  seçin ( ' %r ' gibi şehir ) veya ( ' % R ' gibi şehir )  
-
--- VEYA
-
-  şehrin ' % r ' olduğu şehirden *  seçin
+-- 3
+Müşteriden soyadı SEÇ _
+soyadına göre SİPARİŞ DESC  LIMIT  4 ;
