@@ -1,0 +1,25 @@
+Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleşeninizi.
+
+1. film tablolarında bulunan ve açıklama sütunlarındaki verileri sıralayınız.
+Filmden başlık, açıklama SEÇİN ;
+
+2.film tablonda bulunan tüm sütunlardaki büyük boyutlu film (uzunluk) 60 dan VE 75 on küçük olmayla sıralayınız. * FİLMDEN SEÇİN  _ 
+NEREDE uzunluk > 60  VE uzunluk < 75 ;
+
+3.film tablolarda bulunan tüm sütunlardaki verileri kiralama_rate 0 . 99 VE değiştirme maliyeti 12 . 99 VEYA 28 . 99 olmamayla sıralanırsınız.
+ *  FİLMDEN SEÇİN _
+NEREDE kiralama_oranı = 0 . 99  VE değiştirme_maliyeti = 12 . 99  VEYA değiştirme_maliyeti = 28 . 99 ;
+
+4. müştemilat tablosunda bulunan ilk_name sütunundaki değeri ' Mary ' olan son sütunundaki değeri nedir?
+Müşteriden soyadı SEÇ _
+NEREDE ad_adı = ' Meryem ' ;
+
+" Smith " yanıtını alırız .
+
+5. film tablosundaki uzunlukta(uzunluk) 50 ten büyük OLMAYIP aynı zamanda rent_rate değeri 2 . 99 veya 4 . 99 OLMAYAN verileri sıralanmıştır.
+ *  FİLMDEN SEÇİN _
+NEREDE DEĞİL ( uzunluk > 50 ) VE DEĞİL ( kiralama_oranı = 2,99 VEYA kiralama_oranı = 4,99 ) ; 
+
+5 . Soruya bana gelen ama yanış olabilirim bir çözüm daha daha istiyorum;
+ *  FİLMDEN SEÇİN _
+NEREDE uzunluk <=  50  VE rent_rate !=  2 . 99  VE rent_rate !=  4 . 99 ;
