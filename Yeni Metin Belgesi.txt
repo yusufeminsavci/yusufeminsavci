@@ -1,13 +1,18 @@
- 1
-Filmden başlık, uzunluk SEÇ
-NEREDE başlık ' %n ' GİBİ 
-Uzunluğa Göre SİPARİŞ LIMIT  5 ;
+1
+ AVG SEÇ (kiralama_oranı)
+filmden _
 
 -- 2
-Filmden başlık, uzunluk SEÇ
-NEREDE başlık ' %n ' GİBİ 
-Uzunluğa GÖRE SİPARİŞ DESC  LIMIT  5 OFSET 5 ;
+ SAYI SEÇ ( * )
+filmden _
+NEREDE başlık ' C% ' GİBİ 
 
 -- 3
-Müşteriden soyadı SEÇ _
-soyadına göre SİPARİŞ DESC  LIMIT  4 ;
+ MAX SEÇ (uzunluk)
+filmden _
+NEREDE kiralama_oranı =  0 . 99
+
+-- 4
+ SAYI SEÇ (değiştirme_maliyeti)
+filmden _
+NEREDE uzunluk >  150
