@@ -1,18 +1,14 @@
-1
- AVG SEÇ (kiralama_oranı)
-filmden _
+ SELECT rating FROM film
+GROUP BY rating;
 
--- 2
- SAYI SEÇ ( * )
-filmden _
-NEREDE başlık ' C% ' GİBİ 
+2.) SELECT replacement_cost , count(*) FROM film
+GROUP BY replacement_cost
+HAVING count(*)>50
+ORDER BY count(*)
 
--- 3
- MAX SEÇ (uzunluk)
-filmden _
-NEREDE kiralama_oranı =  0 . 99
+3.) select  COUNT(*) store_id from customer 
 
--- 4
- SAYI SEÇ (değiştirme_maliyeti)
-filmden _
-NEREDE uzunluk >  150
+4.) SELECT COUNT(*), country_id FROM city
+GROUP BY country_id
+ORDER BY COUNT(*) DESC
+LIMIT 2;
