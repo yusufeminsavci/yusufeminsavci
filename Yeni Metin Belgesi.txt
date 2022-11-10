@@ -1,22 +1,33 @@
-ülke tablosunda bulunan ülke sütunundaki ülke 'A' karakterlerinden'a' karakterleriyle sonlananları sıralanacak.
+ Ödev4'in 1. Ödev konusu:
 
-ÜLKEDEN ülke SEÇİN _
-NEREDE ülke ' A%a ' GİBİ  ;
+-- film tablosunda yer alan sütununda yer alan değişken değerleri sıralayınız.
 
+filmden farklı (replacement_cost) seçin
 
--- 2.ülke tablosunda bulunan ülke sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakter ile sonlananları sıralayınız.
+-- Ödev4'in 2. Ödev konusu:
 
-ÜLKEDEN ülke SEÇİN _
-NEREDE ülke ' _____%n ' GİBİ  ;
+-- film tablosunda bulunan değiştirme_ sütununda farklı kaç tane veri vardır?
 
+ filmden sayıyı (replacement_cost ) seçin
 
--- 3.film tablonda başlığındaki sütundaki 4 harfli isimlerden en az adet büyük ya da küçük farketmesizin 'T' karakteri içeren filmdeki isimlerini sıralayın.
+-- Ödev4'in 3. Ödev konusu:
 
-Filmden başlık seçin _
-NEREDE başlık ILIKE ' %T% ' ;
+-- film tablosunda film adlarında (başlık) kaçtanı T karakter ile başlar ve aynı zamanda derecelendirme 'G' yeliğiniz?
 
+ ' T% ' ve derecelendirme = ' G ' gibi bir filmden sayıyı ( başlık ) seçin    
 
--- 4.film tablolarda tüm sütunlardaki şehirden başlığı 'C' karakteri ile küresel ve uzun (uzunluk) 90 dan büyük olan ve kiralama_rate 2.99 olan verileri sıralayınız.
+-- Ödev4'in 4. Ödev konusu:
 
- *  FİLMDEN SEÇİN _
-NEREDE başlık GİBİ  ' C% '  VE uzunluk >  90  VE rent_rate =  2 . 99 ;
+-- ülke tablosunda bulunan ülke isimlerinden (ülke) kaç karakterden oluşmaktadır?.
+
+ ' _____ ' gibi ülkenin bulunduğu ülkeden sayıyı ( * ) seçin _   
+
+-- Ödev4'in 5. Ödev konusu
+
+--     şehir tablosundaki şehir isimlerinin kaç adımından 'R' veya r karakter ile ısırıcı?
+
+ şehirden *  seçin ( ' %r ' gibi şehir ) veya ( ' % R ' gibi şehir )  
+
+-- VEYA
+
+  şehrin ' % r ' olduğu şehirden *  seçin
