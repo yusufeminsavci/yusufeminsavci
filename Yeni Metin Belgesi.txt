@@ -1,12 +1,35 @@
-customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
-SELECT city.city,country.country FROM country
-LEFT JOIN city ON city.country_id = country.country_id;
+(SELECT first_name FROM actor)
+UNION 
+(SELECT first_name FROM customer);
 
---2.customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz RIGHT JOIN sorgusunu yazınız.
-SELECT first_name,last_name,payment_id FROM payment
-RIGHT JOIN customer ON payment.customer_id = customer.customer_id;
 
---3. customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz FULL JOIN sorgusunu yazınız.
+--2.actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
 
-SELECT customer.first_name,customer.last_name,rental.rental_id FROM customer
-FULL OUTER JOIN rental ON rental.customer_id = customer.customer_id;
+(SELECT first_name FROM actor)
+INTERSECT
+(SELECT first_name FROM customer);
+
+
+--3.actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+
+(SELECT first_name FROM actor)
+EXCEPT
+(SELECT first_name FROM customer);
+
+
+--4.İlk 3 sorguyu tekrar eden veriler için de yapalım.
+
+--1.sorgu için;
+(SELECT first_name FROM actor)
+UNION ALL
+(SELECT first_name FROM customer);
+
+--2.sorgu için;
+(SELECT first_name FROM actor)
+INTERSECT ALL
+(SELECT first_name FROM customer);
+
+--3.sorgu için;
+(SELECT first_name FROM actor)
+EXCEPT ALL
+(SELECT first_name FROM customer);
