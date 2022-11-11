@@ -1,35 +1,37 @@
-(SELECT first_name FROM actor)
-UNION 
-(SELECT first_name FROM customer);
+SELECT COUNT(*) FROM film
+WHERE length  >
+(
+		SELECT AVG(length) FROM film
+);
 
 
---2.actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+--2.film tablosunda en yüksek rental_rate değerine sahip kaç tane film vardır?
 
-(SELECT first_name FROM actor)
-INTERSECT
-(SELECT first_name FROM customer);
-
-
---3.actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
-
-(SELECT first_name FROM actor)
-EXCEPT
-(SELECT first_name FROM customer);
+SELECT COUNT(*) FROM film
+WHERE rental_rate =
+(
+	SELECT MAX(rental_rate) FROM film
+);
 
 
---4.İlk 3 sorguyu tekrar eden veriler için de yapalım.
+--3.film tablosunda en düşük rental_rate ve en düşün replacement_cost değerlerine sahip filmleri sıralayınız.
 
---1.sorgu için;
-(SELECT first_name FROM actor)
-UNION ALL
-(SELECT first_name FROM customer);
+SELECT * FROM film
+WHERE rental_rate = ANY
+(
+	SELECT MIN(rental_rate) FROM film
+)
+AND replacement_cost = ANY
+(
+	SELECT MIN(replacement_cost) FROM film
+);
 
---2.sorgu için;
-(SELECT first_name FROM actor)
-INTERSECT ALL
-(SELECT first_name FROM customer);
 
---3.sorgu için;
-(SELECT first_name FROM actor)
-EXCEPT ALL
-(SELECT first_name FROM customer);
+--4.payment tablosunda en fazla sayıda alışveriş yapan müşterileri(customer) sıralayınız.
+
+SELECT customer.first_name, customer.last_name FROM payment
+INNER JOIN customer ON payment.customer_id = customer.customer_id
+WHERE payment.amount =
+(
+    SELECT MAX(amount) FROM payment
+);
