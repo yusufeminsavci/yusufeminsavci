@@ -1,28 +1,73 @@
 public class Main {
-    Course mat = new Course("Matematik", "MAT101", "MAT");
-    Course fizik = new Course("Fizik", "FZK101", "FZK");
-    Course kimya = new Course("Kimya", "KMY101", "KMY");
+    public static void main(String[] args) {
+        /*MyList<Integer> list = new MyList<>();
+        System.out.println("Element count of list : " + list.size());
+        System.out.println("Capacity of list : " + list.getCapacity());
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        System.out.println("Element count of list : " + list.size());
+        System.out.println("Capacity of list : " + list.getCapacity());
+        list.add(50);
+        list.add(60);
+        list.add(70);
+        list.add(80);
+        list.add(90);
+        list.add(100);
+        list.add(110);
+        System.out.println("Element count of list : " + list.size());
+        System.out.println("Capacity of list : " + list.getCapacity());
+        list.toString();*/
 
-    teacher t1 = new teacher("Mahmut Hoca", "90550000000", "MAT");
-    teacher t2 = new teacher("Ahmet kum", "90550000001", "FZK");
-    teacher t3 = new teacher("Nesihan Sönmez", "90550000002", "KMY");
+        /*MyList<Integer> list = new MyList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        System.out.println("2. index : " + list.get(2));
+        list.remove(1);
+        list.add(40);
+        //list.set(0, 100);
+        System.out.println("2. index : " + list.get(2));
+        System.out.println(list.toString());*/
 
-                mat.addTeacher(t1);
-                fizik.addTeacher(t2);
-                kimya.addTeacher(t3);
+        MyList<Integer> list = new MyList<>();
+        System.out.println("List Status: " + (list.isEmpty() ? "Empty" : "Full"));
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(20);
+        list.add(50);
+        list.add(60);
+        list.add(70);
+        System.out.println("List Status: " + (list.isEmpty() ? "Empty" : "Full"));
 
-    Student s1 = new Student("İnek Şaban", 4, "140144015", mat, fizik, kimya);
-                s1.addBulkExamNote(50,20,40);
-                s1.addBulkVerbalNote(80, 40, 25);
-                s1.isPass();
+        // Get first index of list
+        System.out.println("Index : " + list.indexOf(20));
 
-    Student s2 = new Student("Güdük Necmi", 4, "2211133", mat, fizik, kimya);
-                s2.addBulkExamNote(100,50,40);
-                s2.addBulkVerbalNote(90, 60, 80);
-                s2.isPass();
+        // if there is not it returns -1
+        System.out.println("Index :" + list.indexOf(100));
 
-    Student s3 = new Student("Hayta İsmail", 4, "221121312", mat, fizik, kimya);
-                s3.addBulkExamNote(50,80,30);
-                s3.addBulkVerbalNote(60, 100, 50);
-                s3.isPass();
-}
+        // Get last index of list
+        System.out.println("Index : " + list.lastIndexOf(20));
+
+        // Returns Object[] array
+        Object[] arr = list.toArray();
+        System.out.println("First element of object array :" + arr[0]);
+
+        // Get sublist
+        MyList<Integer> mySubList = list.subList(0, 3);
+        System.out.println(mySubList.toString());
+
+        // Check whether list have x value
+        System.out.println("Check 20 : " + list.contains(20));
+        System.out.println("Check 120 : " + list.contains(120));
+
+        // Clear the list
+        list.clear();
+        System.out.println(list.toString());
+
+    }
+    }
+
