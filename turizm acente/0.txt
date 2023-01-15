@@ -1,0 +1,12 @@
+<? xml versiyonu = " 1.0 " kodlama = " UTF-8 " ?>
+< modül  tipi = " JAVA_MODULE "  versiyon = " 4 " >
+  < bileşen  adı = " NewModuleRootManager "  inherit-compiler-output = " true " >
+    < çıktıyı hariç tut />
+    < içerik  url = " dosya://$MODULE_DIR$ " >
+      < sourceFolder  url = " file://$MODULE_DIR$/src "  isTestSource = " false " />
+    </ içerik >
+    < orderEntry  type = " inheritedJdk " />
+    < orderEntry  type = " sourceFolder "  forTests = " false " />
+    < orderEntry  type = " library "  name = " postgresql-42.5.0 "  level = " proje " />
+  </ bileşen >
+</ modül >
