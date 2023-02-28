@@ -1,0 +1,272 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+
+/* Tüm sayfa için font renk özellikleri */
+body{
+    background: #fff;
+    color: #222; 
+    font-family: arial,sans-serif;
+    font-size: small;
+}
+
+/************ header start *************/
+.panel{
+    margin-top:-44px; /* üst paneli yukarı yaklaştırır*/
+}
+
+/* ul inkler */
+.head {
+    padding-left: 0; /* yazılar sola getirilir */
+    overflow:visible;
+    margin: 5px;
+    margin-top: -49px; /*yazılar daha yukarı taşındı*/
+}
+
+.head a:hover{
+    text-decoration: underline;
+}
+
+/* üst soldaki linkler */
+.head-leftli{
+    margin-right: 1px; /* linkler arasında boşluk bırakır */
+    display: flex;
+    float: left; /* linkler yan yana sola soğru dizilir */
+}
+
+
+.head-leftli a {
+ color: #000000; /*link rengi değişir*/
+ padding-left: 15px;
+ font-size: 13px;
+ opacity: 0.75; /* opaklığı ayarlıyor ,rengini açtık */
+ text-decoration: none;
+ 
+ 
+}
+/* profil fotoğrafı */
+.pic { 
+    display: flex;
+    float: right;
+    text-align: center;
+    margin-right: 12px;
+    margin-top: -6px;
+}
+/* profil fotoğrafını yuvarlak yapmak için */
+.radius {
+    border-radius: 50%;
+  }
+
+
+.right{
+    margin-right: 8px;
+}
+
+/* svg  */
+.head-rightliSvg{
+    margin-right: 15px; /* linkler arasında boşluk bırakır */
+    display: flex;
+    float:right; /* linkler yan yana sağa soğru dizilir */
+    opacity: 0.55;
+    padding: 0px 1px;
+    margin-top: -2px;
+}
+
+/* üst sağdaki linkler */
+.head-rightli{
+    margin-right: 12px; /* linkler arasında boşluk bırakır */
+    display: flex;
+    float:right; /* linkler yan yana sağa soğru dizilir */
+}
+
+.head-rightli a {
+ color: #000000; /*link rengi değişir*/
+ padding-left: 15px;
+ font-size: 13px;
+ opacity: 0.75; /* opaklığı ayarlıyor ,rengini açtık */
+ text-decoration: none;  /* metin dekorasyonu temizlenir */
+}
+/************ header finish *************/
+
+
+/* google logo div */
+.g-logo {
+    text-align: center;
+    margin: 47px 0px 0px;
+    height: 233px;
+    margin-top: 79px;
+}
+/* google logo resmi*/
+.g-logo img{
+    padding: 109px 0px 0px;
+    width: 272px;
+    margin-left: 123px;
+    margin-top: 13px;
+}
+
+/* Arama motoru --panel özellikler*/
+.search-panel{
+    background: #fff;
+    border: 1.5px solid #dfe1e5; /*çerçeve rengi ayarlama*/
+    display: flex; 
+    align-items: center; /*nesneleri hizalar*/
+    box-shadow: none; /*Gölgelenirmek için*/
+    margin: 0 auto;
+    height: 47px;
+    margin-top: 7px; 
+    width: 580px;
+    border-radius: 50px; /*çerçeve yuvarlaklaştırılır*/
+    padding-right: 1px;
+}
+
+/* arama motoru üzerine imleç gelince gölgeleme olur  */
+.search-panel:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28)
+}
+
+.search{
+    flex:1; /*flex özelliği ile nesnelere esneklik sağlayıp hizalandırdık*/
+    display: flex;
+    padding: 5px 8px 0px 13px;
+}
+
+/* svg icon */
+.searchIcon svg {
+    width: 20px;
+    height: 20px;
+    color: #9aa0a6;
+    fill: currentColor; /*rengini değitirdik*/
+}
+
+.searchIcon{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex: 1;
+    margin-top: 4px;
+}
+
+
+.input-area {
+    color: transparent;
+    flex: 100%;
+    display: block;
+}
+
+/* textbox düzenleme */
+.input{
+   background-color: transparent;
+   width: 480px;
+   border:none;
+   color: rgba(0,0,0,.87);
+   word-wrap: break-word;
+   outline: none; 
+   display: flex;
+   flex: 100%;
+   line-height: 30px;
+   font-size:16px;
+   font-family: Arial,sans-serif;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 1px;
+}
+
+/* ses iconu */
+.voice-icon{
+    margin-right: 16px;
+}
+.voice-icon button{
+    background-color: transparent;
+    border: none;
+    
+}
+
+
+.section{
+    justify-content: center;
+}
+
+/* butonlar */
+.buttons{
+    display: block;
+    float: left;
+    position: absolute;
+    top: 50%; /*üstten ayrılma payı*/
+    left: 50%;
+    margin-left: -170px;
+    margin-top: -45px;  
+}
+
+
+.btn1,.btn2{
+    background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 14px;
+    padding: 0px 16px;
+    height: 36px;
+    min-width: 54px;
+    line-height: 27px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+/* Butonlara gölge verme */
+.buttons input[type="submit"]:hover{
+    box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28);
+    background-color: #f8f8f8;
+    border: 1px solid #c6c6c6; /*mouse ile üzerine gelindiğinde çerçeve rengi ve yazı rengi değişir*/
+    color: #222
+}
+
+/* mouse ile üzerine tıklandığında olan değişiklikler */
+.buttons input[type="submit"]:focus {
+    border: 1px solid #4d90fe;
+    outline: none
+}
+
+
+/**********************footer bölümü *******************/
+.footer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #dfe1e5;
+    border-top: 1px solid #dadce0;
+    position: fixed;
+    bottom: 0; /*tabana sıfırlar*/
+    width: 100%;
+    margin-left: -9px;
+    line-height: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .footerli {
+    list-style-type: none; /*liste işareti kaldırılırs*/
+    float: left; /*linkleri yanyana sıralar*/
+  }
+  
+  .footerli a {
+    display: block;
+    color: #7a7570;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin-left: 14px;
+    margin-right: -20px;
+  }
+  
+  /* linklerin üzerine mouse ile gelindiğinde altı çizili yapılır */
+  .footerli a:hover {
+    text-decoration: underline;
+  }
+  /*********************Footer *********************/
